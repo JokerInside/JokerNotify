@@ -25,7 +25,7 @@ TriggerClientEvent('JokerNotify:Alert', xPlayer.source, "Bank", _U('received_hel
 - neutral (grey)
 
 ## How to add new colors:
-
+```lua
 1) Open styles.css and add the following to the last line.
 
 /* Example Notification */
@@ -59,7 +59,7 @@ else if (event.data.type == 'type') {
     $(`.wrapper-${number}`).addClass('type type-border')
     sound.play();
 }
-
+```
 `Don't forget to change the type to the same name as you choose for "example".`
 
 `If you need help contact me on discord: https://dsc.gg/SSTT`
