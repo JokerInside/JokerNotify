@@ -1,28 +1,32 @@
+<h1 align='center'>FOR [ESX] FRAMEWORK</a></h1><p align='center'><b><a href='https://discord.esx-framework.org/'>Discord</a> - <a href='https://documentation.esx-framework.org/legacy/installation'>Documentation</a></b></h5>
+
 To display a notification you should call it like below:
 
-# Client side
-
+## Client side
+```
 exports['JokerNotify']:Alert("Title", "Message", Time, 'type')
-
-# Server side
-
+```
+## Server side
+```
 TriggerClientEvent('JokerNotify:Alert', source, "Title", "Message", Time, 'type')
+```
+```
 TriggerClientEvent('JokerNotify:Alert', xPlayer.source, "Bank", _U('received_help', salary), 5000, 'info')
+```
 
+`[Time] - 1000 = 1 second | 5000 = 5 seconds`
 
-[Time] - 1000 = 1 second | 5000 = 5 seconds
+### Types: 
+- success (green)
+- info (blue)
+- warning (yellow)
+- error (red)
+- phone (orange)
+- neutral (grey)
 
-Types: 
-	- success (green)
-	- info (blue)
-	- warning (yellow)
-	- error (red)
-	- phone (orange)
-	- neutral (grey)
+## How to add new colors:
 
-How to add new colors:
-
-1. Open styles.css and add the following to the last line.
+1) Open styles.css and add the following to the last line.
 
 /* Example Notification */
 
@@ -44,7 +48,7 @@ How to add new colors:
 
 To know the content code navigate to https://fontawesome.com/v5.15/icons?d=gallery&p=2, select an icon and copy it's code.
 
-2. Open scripts.js and add the following to the line 76.
+2) Open scripts.js and add the following to the line 76.
 
 else if (event.data.type == 'type') {
     $(`.title-${number}`).html(event.data.title).css({
@@ -56,6 +60,6 @@ else if (event.data.type == 'type') {
     sound.play();
 }
 
-Don't forget to change the type to the same name as you choose for "example".
+`Don't forget to change the type to the same name as you choose for "example".`
 
-If you need help contact me on discord: https://dsc.gg/SSTT
+`If you need help contact me on discord: https://dsc.gg/SSTT`
